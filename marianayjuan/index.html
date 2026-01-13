@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>❤️Mariana & Juan💍</title>
+  <link rel="stylesheet" href="../marianayjuan/styles.css">
+</head>
+<body>
+
+  <!-- Hero principal -->
+
+  <header class="header">
+    <div class="logo">
+      <img src="../marianayjuan/images/mariana-y-juan.png">
+    </div>
+  
+    <button class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  
+    <nav class="nav" id="nav">
+      <a href="#inicio">Inicio</a>
+      <a href="#evento">Evento</a>
+      <a href="#asistencia">Confirmar asistencia</a>
+      <a href="#dresscode">Dresscode</a>
+      <a href="#mesa">Mesa de regalos</a>
+    </nav>
+  </header>
+
+<!--Hero-->
+<section id="inicio" class="hero">
+  <picture>
+      <!-- Imagen para mobile -->
+      <source srcset="../marianayjuan/images/hero-mobile.png" media="(max-width: 768px)">
+
+      <!-- Imagen para desktop (fallback) -->
+      <img src="../marianayjuan/images/hero.png" alt="Hero">
+  </picture>
+</section>
+
+<!--flor-->
+
+<section class="floruno">
+  <img src="../marianayjuan/images/flor01.png">
+</section>
+
+  <!--Contador-->
+  <section class="savethedate">
+    <img src="../marianayjuan/images/savethedate.png">
+  </section>
+
+  <div class="contador">
+    <div class="fecha">Abril 18 2026</div>
+    <div class="tiempo">
+        <div class="bloque">
+            <div class="numero" id="dias">0</div>
+            <div class="etiqueta">Días</div>
+        </div>
+        <div class="bloque">
+            <div class="numero" id="horas">0</div>
+            <div class="etiqueta">Hrs</div>
+        </div>
+        <div class="bloque">
+            <div class="numero" id="minutos">0</div>
+            <div class="etiqueta">Min</div>
+        </div>
+        <div class="bloque">
+            <div class="numero" id="segundos">0</div>
+            <div class="etiqueta">Seg</div>
+        </div>
+    </div>
+</div>
+
+
+ <!-- Historia -->
+<section class="wedding-section">
+  <div class="wedding-container">
+    
+    <!-- Imagen -->
+    <div class="wedding-image">
+      <img 
+        src="../marianayjuan/images/noscasamos.gif" 
+        alt="Foto de la pareja"
+      />
+    </div>
+
+    <!-- Texto -->
+    <div class="wedding-text">
+
+      <h2>¡Nos casamos!</h2>
+      <p>Después de muchas risas, aventuras y miles de recuerdos, decidimos dar el siguiente paso.</p>
+      <p>Queremos celebrar este gran día con tu compañía. </p>
+    </div>
+
+  </div>
+</section>
+
+<!--estrella-->
+
+<section class="estrella">
+  <img src="../marianayjuan/images/estrella01.png">
+</section>
+
+<!--flor02-->
+
+<section class="flordos">
+  <img src="../marianayjuan/images/flor02.png">
+</section>
+
+
+<!-- Evento -->
+<section class="evento-header" id="evento">
+  <img src="../marianayjuan/images/evento.png">
+</section>
+
+<section class="evento-section">
+  <div class="evento-container">
+
+    <!-- Texto -->
+    <div class="evento-text">
+
+      <h1 style="font-weight: normal;">Te esperamos en</h1>
+
+      <h2>El Convento, Coyoacán</h2>
+      
+      <p>el <b>18 de Abril 2026</b> a las <b>05:30 pm</b></p>
+      <p>¡Habrá Valet Parking! <br>Tendrá un costo de <b>$120.00</b></p>
+      <button id="verMapaBtn">Ver mapa</button>
+
+      <div id="opcionesMapa" class="map-options">
+        <a href="https://www.google.com/maps/search/?api=1&query=Fernández+Leal+96+La+Concepción+Coyoacán+CDMX" target="_blank">
+          Google Maps
+        </a>
+        <a href="https://waze.com/ul?q=Fernández%20Leal%2096%20Coyoacán&navigate=yes" target="_blank">
+          Waze
+        </a>
+        <a href="https://maps.apple.com/?q=Fernández+Leal+96+Coyoacán+CDMX" target="_blank">
+          Apple Maps
+        </a>
+      </div>
+      
+      
+        
+    </div>
+
+    <!-- Imagen -->
+
+    <div class="evento-image">
+      <img 
+        src="../marianayjuan/images/image02.png" 
+        alt="mariana y juan"
+      />
+    </div>
+
+  </div>
+</section>
+
+
+<!--FORMULARIO 2-->
+
+<section class="formulario-header" id="asistencia" >
+  <img src="../marianayjuan/images/asistencia-text.png">
+
+<p class="subtitle">Escribe tu nombre para consultar tus boletos reservados</p>
+
+<div class="container">
+    <div class="autocomplete">
+        <input type="text" id="search" placeholder="Busca tu nombre">
+        <div id="suggestions" class="suggestions"></div>
+    </div>
+
+    <div id="card" class="card">
+        <h2 id="personName"></h2>
+        <p style="text-align:center; font-size: 22px; margin-top: 16px; color: #7A785F;">💌 Tienes <b id="totalTickets"></b> boletos disponibles</p>
+
+        <div class="ticket-row">
+            <div class="counter">
+                <button onclick="changeTickets(-1)">−</button>
+                <span id="selectedTickets">1</span>
+                <button onclick="changeTickets(1)">+</button>
+            </div>
+            <p style="text-align:center; font-size: 18px; margin-top: 16px; color: #7A785F;">Confirmarás <span id="selectedTicketsText">1</span> boletos</p>
+        </div>
+
+        <div style="text-align:center; margin-top:24px; color:#D87D48;">
+  <p style="font-size:22px;">¿Tienes alguna restricción alimentaria?</p>
+</div>
+
+<div style="text-align:center; margin-top:8px; color:#7A785F;">
+
+  <label class="food-restriction-option">
+    <input type="radio" name="foodRestriction" value="no" checked>
+    <span class="radio-custom"></span>
+    No
+  </label>
+  
+  <label class="food-restriction-option">
+    <input type="radio" name="foodRestriction" value="yes">
+    <span class="radio-custom"></span>
+    Sí
+  </label>
+</div>
+        
+        <!-- comentario solo si hay restricción -->
+        <div id="comment-container" style="display:none; margin-top:16px;">
+          <textarea id="comment" rows="3" placeholder="Cuéntanos para considerarlo..."></textarea>
+        </div>
+
+
+        <button class="btn-primary" onclick="confirmAttendance(true)">Sí, asistiré</button>
+        <div class="btn-secondary" onclick="confirmAttendance(false)">No podré asistir</div>
+    </div>
+
+    <div id="message" class="success"></div>
+</div>
+</section>
+
+
+<!-- Dresscode -->
+<section class="dresscode-header">
+  <img src="../marianayjuan/images/dresscode-text.png">
+</section>
+
+<section id="dresscode"  class="dresscode-section">
+  <div class="dresscode-container">
+     <!-- Imagen -->
+
+     <div class="dresscode-image">
+      <img 
+        src="../marianayjuan/images/dresscode.png" 
+        alt="Dresscode"
+      />
+    </div>
+
+    <!-- Texto -->
+    <div class="dresscode-text">
+      <p>
+        Queremos que en este día te sientas cómodo y disfrutes tanto como nosotros.
+
+      </p>
+
+      <p>Te sugerimos un estilo semiformal o de cóctel.</p>
+      <p>
+        Y si eres como nosotros y no estás muy seguro de qué significa eso, aquí te dejamos algunas ideas.
+      </p>
+
+      <button><a href="https://pin.it/fNHVVFyM6" target="_blank">Ver referencias</a></button>
+    </div>
+
+   
+
+  </div>
+</section>
+
+<!--flor-->
+
+<section class="floruno">
+  <img src="../marianayjuan/images/flor01.png">
+</section>
+
+<!-- Mesa de regalos-->
+
+<section id="mesa" class="mesa-section">
+  <div class="mesa-wrapper">
+
+    <!-- Título -->
+    <section  class="mesa-header">
+    <img src="../marianayjuan/images/mesa-text.png">
+    </section>
+
+    <!-- Texto introductorio -->
+    <p class="mesa-text">
+      Nos hace muy felices compartir este momento contigo.
+Ya tenemos todo lo necesario para nuestro hogar, pero si deseas hacernos un regalo, te agradeceríamos si pudieras aportar para nuestra luna de miel.
+
+    </p>
+
+    <!-- Contenido -->
+    <div class="mesa-container">
+
+      <!-- Cuenta bancaria -->
+      <div class="mesa-box">
+        <p><strong>Nombre del titular:</strong> Mariana López</p>
+        <p><strong>Banco:</strong> BBVA</p>
+        <p><strong>Cuenta / CLABE:</strong><br>012180015072332515</p>
+      </div>
+
+      <!-- Divisor -->
+      <div class="mesa-divider"></div>
+
+      <!-- Paypal -->
+      <div class="mesa-paypal">
+        <img src="../marianayjuan/images/paypal-qr.jpg" alt="QR Paypal">
+        <a class="paypal-btn" 
+           href="https://www.paypal.com/paypalme/MarianaLopezFilloy" 
+           target="_blank">
+          Ver PayPal
+        </a>
+      </div>
+
+    </div>
+
+
+  </div>
+</section>
+
+<!--flor02-->
+
+<section class="flordos">
+  <img src="../marianayjuan/images/flor02.png">
+</section>
+
+
+
+
+  <script src="../marianayjuan/script.js"></script>
+</body>
+</html>
